@@ -50,6 +50,13 @@ export = (md: MarkdownIt, options, containerOptions?) => {
     )
     .use(
       ...createContainer(
+        "important",
+        containerOptions?.importantLabel || "IMPORTANT",
+        md
+      )
+    )
+    .use(
+      ...createContainer(
         "details",
         containerOptions?.detailsLabel || "Details",
         md
