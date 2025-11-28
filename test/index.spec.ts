@@ -442,11 +442,11 @@ belong to the previous footnote. <a href="#fnref2" class="footnote-backref">â†©ï
       text: "::: warning\n*here be dragons*\n:::",
     };
     const result = render.call(Hexo, data);
-    expect(result).toBe("<div class=\"warning custom-block\"><p class=\"custom-block-title\">WARNING</p>\n<p><em>here be dragons</em></p>\n</div>\n");
+    expect(result).toBe("<blockquote class=\"warning custom-block\"><p class=\"custom-block-title\">WARNING</p>\n<p><em>here be dragons</em></p>\n</blockquote>\n");
 
     data.text = "::: warning custom-title\n*here be dragons*\n:::";
     const result3 = render.call(Hexo, data);
-    expect(result3).toBe("<div class=\"warning custom-block\"><p class=\"custom-block-title\">custom-title</p>\n<p><em>here be dragons</em></p>\n</div>\n");
+    expect(result3).toBe("<blockquote class=\"warning custom-block\"><p class=\"custom-block-title\">custom-title</p>\n<p><em>here be dragons</em></p>\n</blockquote>\n");
 
     Hexo.config.markdown_it_plus.plugins[0].plugin.enable = false;
     const result2 = render.call(Hexo, data);
@@ -472,11 +472,11 @@ belong to the previous footnote. <a href="#fnref2" class="footnote-backref">â†©ï
       text: "::: details\n*here be dragons*\n:::",
     };
     const result = render.call(Hexo, data);
-    expect(result).toBe("<details class=\"details custom-block\"><summary>Details</summary>\n<p><em>here be dragons</em></p>\n</details>\n");
+    expect(result).toBe("<details class=\"details custom-block\"><summary>Details</summary><div class=\"detail-content\">\n<p><em>here be dragons</em></p>\n</div></details>\n");
 
     data.text = "::: details custom-title\n*here be dragons*\n:::";
     const result3 = render.call(Hexo, data);
-    expect(result3).toBe("<details class=\"details custom-block\"><summary>custom-title</summary>\n<p><em>here be dragons</em></p>\n</details>\n");
+    expect(result3).toBe("<details class=\"details custom-block\"><summary>custom-title</summary><div class=\"detail-content\">\n<p><em>here be dragons</em></p>\n</div></details>\n");
 
     Hexo.config.markdown_it_plus.plugins[0].plugin.enable = false;
     const result2 = render.call(Hexo, data);

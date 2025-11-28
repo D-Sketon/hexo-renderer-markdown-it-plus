@@ -23,9 +23,9 @@ function createContainer(
             references: env.references,
           });
           if (klass === "details")
-            return `<details class="${klass} custom-block"${attrs}><summary>${title}</summary>\n`;
-          return `<div class="${klass} custom-block"${attrs}><p class="custom-block-title">${title}</p>\n`;
-        } else return klass === "details" ? `</details>\n` : `</div>\n`;
+            return `<details class="${klass} custom-block"${attrs}><summary>${title}</summary><div class="detail-content">\n`;
+          return `<blockquote class="${klass} custom-block"${attrs}><p class="custom-block-title">${title}</p>\n`;
+        } else return klass === "details" ? `</div></details>\n` : `</blockquote>\n`;
       },
     },
   ];
