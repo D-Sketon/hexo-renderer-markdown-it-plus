@@ -17,6 +17,7 @@
     "dist"
   ],
   "scripts": {
+    "prepare": "npm run build",
     "build": "tsc",
     "pretest": "npm run build",
     "test": "vitest --no-watch"
@@ -30,17 +31,17 @@
   "dependencies": {
     "@vscode/markdown-it-katex": "^1.1.2",
     "hexo-util": "^3.3.0",
-    "markdown-it": "^13.0.2",
-    "markdown-it-abbr": "^1.0.4",
-    "markdown-it-container": "^3.0.0",
-    "markdown-it-deflist": "^2.1.0",
-    "markdown-it-emoji": "^2.0.2",
-    "markdown-it-footnote": "^3.0.3",
-    "markdown-it-ins": "^3.0.1",
-    "markdown-it-mark": "^3.0.1",
-    "markdown-it-sub": "^1.0.0",
-    "markdown-it-sup": "^1.0.0",
-    "markdown-it-toc": "^1.1.0",
+    "markdown-it": "^14.1.0",
+    "markdown-it-abbr": "^2.0.0",
+    "markdown-it-container": "^4.0.0",
+    "markdown-it-deflist": "^3.0.0",
+    "markdown-it-emoji": "^3.0.0",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-ins": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "@maboloshi/markdown-it-toc": "^1.1.1",
     "markdown-it-toc-and-anchor": "^4.2.0"
   },
   "devDependencies": {
