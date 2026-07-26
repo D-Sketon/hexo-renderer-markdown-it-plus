@@ -1,6 +1,6 @@
 {
   "name": "@reimujs/hexo-renderer-markdown-it-plus",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "A faster and CommonMark compliant alternative for Hexo.",
   "main": "dist/index.js",
   "repository": {
@@ -45,9 +45,13 @@
   },
   "devDependencies": {
     "@types/markdown-it": "^14.1.2",
-    "@types/node": "^24.10.1",
-    "hexo": "^8.1.1",
+    "@types/node": "^26.1.1",
+    "hexo": "^8.1.2",
     "typescript": "^5.9.3",
-    "vitest": "^3.0.0"
+    "vitest": "^4.1.10"
+  },
+   "publishConfig": {
+    "provenance": true,
+    "access": "public"
   }
 }
